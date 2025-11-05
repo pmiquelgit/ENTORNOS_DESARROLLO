@@ -23,7 +23,11 @@ public class Libro {
         this.dispReserva = dispReserva;
     }
 
+    ///////////////////////////////////////////////////////////
+    //FUNCIONALIDADES PARA CADA ATRIBUTO
     //Creo los getters y setters para cada característica
+    ///////////////////////////////////////////////////////////
+
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
@@ -80,6 +84,30 @@ public class Libro {
         return this.dispReserva;
     }
 
+    //FUNCION ESTA DISPONIBLE PARA RESERVA
+    public boolean estaDisponible(String dispReserva) {
+        if (dispReserva.equals("Si")) {
+            System.out.println("Este libro está disponible para su reserva!");
+            return true;
+        } else {
+            System.out.println("Este libro no está disponible para su reserva.");
+            return false;
+        }
+    }
 
+    //FUNCION ES EXTRANJERO SI NO ES ESPANYOL
+    public boolean esExtranjero(String idioma) {
+        if (idioma.equals("Español") || idioma.equals("Espanyol")) {
+            System.out.println("El libro está escrito en Español.");
+            return true;
+        } else {
+            System.out.println("El libro es extranjero, está escrito en: " + this.idioma);
+            return false;
+        }
+    }
 
+    //FUNCION DE INFORMACIÓN
+    public void informacion() {
+        System.out.println("Libro: " + this.titulo + ", editorial " + this.editorial + ", año " + this.anno + ", idioma " + this.idioma + ", número de páginas " + this.numPaginas + ". Hay disponibilidad: " + this.dispReserva);  
+    }
 }
