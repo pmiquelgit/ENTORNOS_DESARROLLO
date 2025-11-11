@@ -3,13 +3,13 @@ package poo;
 public class Libro {
     
     //Defino las características que tiene el libro
-    String titulo;
-    String ISBN;
-    String editorial;
-    String idioma;
-    int numPaginas;
-    int anno;
-    String dispReserva;
+    private String titulo;
+    private String ISBN;
+    private String editorial;
+    private String idioma;
+    private int numPaginas;
+    private int anno;
+    private String dispReserva;
 
 
     //Creo el objeto del libro

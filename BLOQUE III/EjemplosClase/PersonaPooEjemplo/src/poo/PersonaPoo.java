@@ -6,15 +6,15 @@ public class PersonaPoo {
      * Definicion de atributos de la persona
      */
 
-    String nombre;
-    int edad;
-    String direccion;
-    String apellidos;
-    String dni;
-    String email;
-    String telefono;
-    String profesion;
-    int annoExperiencia;
+    private String nombre;
+    private int edad;
+    private String direccion;
+    private String apellidos;
+    private String dni;
+    private String email;
+    private String telefono;
+    private String profesion;
+    private int annoExperiencia;
     /**
      * Definicion del comportamiento de la persona
      */
@@ -29,6 +29,7 @@ public class PersonaPoo {
         this.annoExperiencia = annoExperiencia;
     }
 
+    //MÉTODO PARA MOSTRAR INFORMACIÓN DE LA CLASE PERSONA
     public void mostrarInformacion() {
 
         System.out.println("Nombre: " + this.nombre + " y edad: " + this.edad + " en la dirección: " + this.direccion);

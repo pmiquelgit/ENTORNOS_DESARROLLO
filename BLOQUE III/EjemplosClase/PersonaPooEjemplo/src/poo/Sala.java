@@ -2,11 +2,11 @@ package poo;
 
 public class Sala {
     
-        String nombre;
-        int capacidad;
-        boolean pizarra;
-        String tipo;
-        boolean dispReserva;
+        private String nombre;
+        private int capacidad;
+        private boolean pizarra;
+        private String tipo;
+        private boolean dispReserva;
 
     public Sala (String nombre, int capacidad, boolean pizarra, String tipo, boolean dispReserva) {
 
