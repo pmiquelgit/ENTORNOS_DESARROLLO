@@ -12,7 +12,7 @@ public class Sala {
         private boolean dispReserva;
         private int numPersonas;
 
-        //Lista de las personas que hay en la sala
+        //DEFINO LA LISTA DE PERSONAS EN LOS ATRIBUTOS
         private List<PersonaPoo>personas;
 
     public Sala (String nombre, int capacidad, boolean pizarra, String tipo, boolean dispReserva) {
@@ -24,16 +24,15 @@ public class Sala {
         this.dispReserva = dispReserva;
         this.numPersonas = numPersonas;
 
-        //Constructor para la lista de personas
+        //CREO LA LISTA DE PERSONAS EN EL CONSTRUCTOR
         this.personas = new ArrayList<>();
 
     }
         //////////////////////////
-        //FUNCIONALIDADES
+        /////FUNCIONALIDADES//////
         //////////////////////////
 
     //GETTERS Y SETTERS PARA CADA ATRIBUTO
-
     public void setNombre(String nombre) {
         nombre = this.nombre;
     }
@@ -106,6 +105,7 @@ public class Sala {
     }
 
     //FUNCION PARA AÑADIR PERSONAS A LA SALA
+    //Aquí he creado una condición que verifique si no supera la capacidad de personas
     public boolean entrarPersona(PersonaPoo p)
     {
         if (this.personas.size() < this.getCapacidad())
@@ -121,6 +121,10 @@ public class Sala {
     }
 
     //MÉTODO PARA SACAR PERSONAS DE LA SALA
+    //Aquí he considerado más opciones:
+    //1. Si la capacidad me perite sacar a personas (Porque si hay 0 personas no habrá a quién sacar.
+    //2. Si la capacidad es de 0, que directamente me diga que no hay nadie en la sala.
+    //3. Si ninguna de ellas es cierta, significa que la persona no estaba en la sala directamente.
     public boolean salirPersona(PersonaPoo p)
     {
         if (this.getCapacidad() > 0 && this.personas.remove(p))
@@ -137,7 +141,9 @@ public class Sala {
         }
        
     }
-            //MÉTODO PARA MOSTRAR TODAS LAS PERSONAS QUE HAY EN LA SALA
+            //MÉTODO PARA MOSTRAR TODAS LAS PERSONAS QUE HAY EN LA SALA.
+            //De nuevo, he realizado un bucle para mostrar todas las personas de la lista.
+            //Junto con toda su información
             public void mostrarPersonas()
         {
             System.out.println("Hay " + this.personas.size() + " en la sala.");
