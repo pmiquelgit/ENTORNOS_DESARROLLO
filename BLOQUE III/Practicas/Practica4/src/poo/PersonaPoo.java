@@ -117,6 +117,7 @@ public class PersonaPoo {
         return this.direccion;
     }
 
+    //MÉTODO PARA SABER SI LA PERSONA ESTÁ JUBILADA O NO
     public boolean estaJubilado() {
         if (this.edad > 65) {
             System.out.println("La persona en cuestión se encuentra jubilad@.");
