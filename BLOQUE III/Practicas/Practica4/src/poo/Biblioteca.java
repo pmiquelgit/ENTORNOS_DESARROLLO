@@ -21,6 +21,7 @@ public class Biblioteca {
         this.horaApertura = horaApertura;
         this.horaCierre = horaCierre;
 
+        //AQUÍ INICIALIZO LAS LISTAS
         this.libros = new ArrayList<>();
         this.salas = new ArrayList<>();
     }
@@ -118,7 +119,7 @@ public class Biblioteca {
 
 
     //MÉTODO PARA MOSTRAR LOS LIBROS QUE HAY EN LA BIBLIOTECA
-    //Mostraré los libros que hay disponibles
+    //Mostraré los libros que hay disponibles junto con su nombre, editorial y año de salida
 
         public void mostrarLibros(){
         System.out.println("Hay " + this.libros.size() + " libros disponibles");
@@ -140,6 +141,7 @@ public class Biblioteca {
 
 
     //MÉTODO PARA MOSTRAR LAS SALAS QUE HAY EN LA BIBLIOTECA
+    //Mostraré cada una con su nombre, número de personas, la capacidad y el tipo de sala.
     public void mostrarSalas(){
         System.out.println("Hay " + this.salas.size() + " salas.");
 
@@ -157,7 +159,8 @@ public class Biblioteca {
     }
 
 
-    //MÉTODO PARA MOSTRAR LAS SALAS DISPONIBLES
+    //MÉTODO PARA MOSTRAR LAS SALAS VACÍAS/DISPONIBLES
+    //Mostraré las salas que contengan 0 personas
     public void mostrarSalasDisponibles()
     {
         System.out.println("Número de salas vacías: ");
@@ -172,6 +175,7 @@ public class Biblioteca {
     }
 
     //MÉTODO PARA MOSTRAR LAS PERSONAS QUE HAY EN TOTAL EN TODAS LAS SALAS
+    //Aquí haré un bucle que vaya sumando una por una el número de cada sala al total
     public void motrarTotalPersonas()
     {
         int totalPersonas = 0;
@@ -226,6 +230,8 @@ public class Biblioteca {
     }
 
     //Funcion para mostrar los libros por su nombre
+    //Aquí haré un bucle que recorra toda la lista de libros que haya
+    //Y que lo vaya comparando con el título introducido en el método
     public Libro buscarLibroPorTitulo(String titulo)
     {
         for (Libro libro : this.libros)
