@@ -23,6 +23,11 @@ public class Libro {
         this.dispReserva = dispReserva;
     }
 
+    public void LibroFisico ()
+    {
+        
+    }
+
     ///////////////////////////////////////////////////////////
     //FUNCIONALIDADES PARA CADA ATRIBUTO
     //Creo los getters y setters para cada característica

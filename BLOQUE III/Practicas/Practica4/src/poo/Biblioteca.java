@@ -9,9 +9,12 @@ public class Biblioteca {
     private int horaApertura;
     private int horaCierre;
 
-    //AQUÍ AÑADO LAS LISTAS QUE ME PIDE
+    //AQUÍ AÑADO LAS LISTAS QUE ME PIDE <-- PRÁCTICA 4
     private List<Libro>libros;
     private List<Sala>salas;
+
+    //PRÁCTICA 5 - AÑADIR LISTA DE PERSONAS
+    private List<PersonaPoo>personas;
 
 
     public Biblioteca (String nombre,String direccion, int horaApertura, int horaCierre) 
@@ -21,12 +24,28 @@ public class Biblioteca {
         this.horaApertura = horaApertura;
         this.horaCierre = horaCierre;
 
-        //AQUÍ INICIALIZO LAS LISTAS
+        //AQUÍ INICIALIZO LAS LISTAS  <-- PRÁCTICA 4
         this.libros = new ArrayList<>();
         this.salas = new ArrayList<>();
+
+        //PRÁCTICA 5 - INICIALIZO LA LISTA "PERSONAS"
+        this.personas = new ArrayList<>();
     }
 
-    //CREAR LOS MÉTODOS PARA AÑADIR Y ELIMINAR LIBROS DE LAS LISTAS
+    //PRÁCTICA 5 - MÉTODOS PARA REGISTRAR PERSONA Y PRESTAMOS EN BIBLIOTECA
+    public void registrarPersona(PersonaPoo visitante)
+    {
+        System.out.println(visitante.getNombre() + " ha visitado la biblioteca." + nombre);
+    }
+
+    public void registrarPrestamo(PersonaPoo solicitador, Libro libro)
+    {
+        System.out.println("La persona " + solicitador.getNombre() + " ha tomado prestado el libro: " + libro.getTitulo());
+    }
+
+
+    //CREAR LOS MÉTODOS PARA AÑADIR Y ELIMINAR LIBROS DE LAS LISTAS  <-- PRÁCTICA 4
+    //En vez de establecer el nombre del objeto como "l" he preferido poner "libro" al igual que con "salas"
     public void addLibro(Libro libro)
     {
         this.libros.add(libro);
@@ -45,7 +64,7 @@ public class Biblioteca {
         
     }
 
-    //CREAR LOS MÉTODOS PARA AÑADIR Y ELIMINAR SALAS DE LAS LISTAS
+    //CREAR LOS MÉTODOS PARA AÑADIR Y ELIMINAR SALAS DE LAS LISTAS  <-- PRÁCTICA 4
     public void addSala(Sala sala)
     {
         this.salas.add(sala);
@@ -63,7 +82,7 @@ public class Biblioteca {
         }
     }
 
-    //GETTERS Y SETTERS PARA CADA ATRIBUTO
+    //GETTERS Y SETTERS PARA CADA ATRIBUTO  <-- PRÁCTICA 4
     public void setNombre(String nombre) 
     {
         nombre = this.nombre;
@@ -99,7 +118,7 @@ public class Biblioteca {
         horaCierre = this.horaCierre;
     }
 
-    //FUNCION PARA COMPROBAR SI ESTÁ ABIERTA
+    //FUNCION PARA COMPROBAR SI ESTÁ ABIERTA  <-- PRÁCTICA 4
     public void estaAbierta(int hora) 
     {
         if (hora > this.horaApertura && hora < this.horaCierre) 
@@ -111,7 +130,7 @@ public class Biblioteca {
         }
     }
 
-    //FUNCION PARA LA INFORMACIÓN DE LA BIBLIOTECA
+    //FUNCION PARA LA INFORMACIÓN DE LA BIBLIOTECA  <-- PRÁCTICA 4
     public void informacionBiblioteca() 
     {
         System.out.println("Biblioteca: " + this.nombre + ". Dirección: " + this.direccion + ". Abierto desde las " + this.horaApertura + " hasta las " + this.horaCierre);
@@ -119,7 +138,7 @@ public class Biblioteca {
 
 
     //MÉTODO PARA MOSTRAR LOS LIBROS QUE HAY EN LA BIBLIOTECA
-    //Mostraré los libros que hay disponibles junto con su nombre, editorial y año de salida
+    //Mostraré los libros que hay disponibles junto con su nombre, editorial y año de salida  <-- PRÁCTICA 4
 
         public void mostrarLibros(){
         System.out.println("Hay " + this.libros.size() + " libros disponibles");
@@ -140,8 +159,8 @@ public class Biblioteca {
 }
 
 
-    //MÉTODO PARA MOSTRAR LAS SALAS QUE HAY EN LA BIBLIOTECA
-    //Mostraré cada una con su nombre, número de personas, la capacidad y el tipo de sala.
+    //MÉTODO PARA MOSTRAR LAS SALAS QUE HAY EN LA BIBLIOTECA  <-- PRÁCTICA 4
+    //Mostraré cada una con su nombre, número de personas, la capacidad y el tipo de sala.  <-- PRÁCTICA 4
     public void mostrarSalas(){
         System.out.println("Hay " + this.salas.size() + " salas.");
 
@@ -159,7 +178,7 @@ public class Biblioteca {
     }
 
 
-    //MÉTODO PARA MOSTRAR LAS SALAS VACÍAS/DISPONIBLES
+    //MÉTODO PARA MOSTRAR LAS SALAS VACÍAS/DISPONIBLES  <-- PRÁCTICA 4
     //Mostraré las salas que contengan 0 personas
     public void mostrarSalasDisponibles()
     {
@@ -174,7 +193,7 @@ public class Biblioteca {
         }
     }
 
-    //MÉTODO PARA MOSTRAR LAS PERSONAS QUE HAY EN TOTAL EN TODAS LAS SALAS
+    //MÉTODO PARA MOSTRAR LAS PERSONAS QUE HAY EN TOTAL EN TODAS LAS SALAS  <-- PRÁCTICA 4
     //Aquí haré un bucle que vaya sumando una por una el número de cada sala al total
     public void motrarTotalPersonas()
     {
@@ -186,7 +205,7 @@ public class Biblioteca {
         System.out.println("En total de todas las salas hay: " + totalPersonas + " personas.");
     }
 
-    //FUNCION PARA MOSTRAR LA INFORMACIÓN DE TODA LA BIBLIOTECA
+    //FUNCION PARA MOSTRAR LA INFORMACIÓN DE TODA LA BIBLIOTECA  <-- PRÁCTICA 4
 
     public void mostrarBiblioteca()
     {
@@ -229,6 +248,7 @@ public class Biblioteca {
         }
     }
 
+    //PRÁCTICA 4
     //Funcion para mostrar los libros por su nombre
     //Aquí haré un bucle que recorra toda la lista de libros que haya
     //Y que lo vaya comparando con el título introducido en el método
@@ -242,5 +262,18 @@ public class Biblioteca {
             }
         }
         return null;
+    }
+
+
+    public void asignarResponsable(Sala s, PersonaPoo personaResponsable)
+    {
+        if (salas.contains(s))
+        {
+            s.setPersonaResponsable(personaResponsable);
+            System.out.println(personaResponsable + " es la persona responsable de esta sala.");
+        } else
+        {
+            System.out.println("Esta sala no contiene ninguna persona responsable");
+        }
     }
 }
