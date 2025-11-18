@@ -2,22 +2,18 @@ package poo;
 
 public class Main {
     public static void main(String[] args) {
-        PersonaPoo persona1 = new PersonaPoo("Mbappe", 26);
-        PersonaPoo persona2 = new PersonaPoo("Lamine", 18);
+       
+        //He borrado el ejemplo que hicimos en clase para el main y lo voy a dejar
+        //Con lo que me pide la práctica 5 (Actividad 7) solamente, para tenerlo
+        //Más ordenado.
 
-        persona1.setDireccion("Madrid, 10");
+        //Creo una biblioteca que se llame "Central"
+        Biblioteca biblioCentral = new Biblioteca("Central", "Sant s'adurní", 9, 22);
 
-        persona1.mostrarInformacion();
-        persona2.mostrarInformacion();
+        LibroFisico libroFisico1 = new LibroFisico("PinochoFísico", "019403NCN93X9", "Santillana", "Español", 120, 2000, "Si", "Prat de llobregat");
+        LibroDigital libroDigital1 = new LibroDigital("PanchoDigital", "983749DBD92", "LibrosMundo", "Francés", 134, 2002, "Si", "EPUB", 4.53);
 
-        System.out.println("Para la persona 1 sabemos que tiene " + persona1.getEdad() + " años.");
 
-        Sala sala1 = new Sala("Sala del comienzo", 21, true, "estudio", true);
 
-        sala1.informacionSala();
-
-        sala1.estaDisponible();
-
-        sala1.tienePizarra();
     }
 }

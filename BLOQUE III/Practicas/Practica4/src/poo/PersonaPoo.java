@@ -15,10 +15,11 @@ public class PersonaPoo {
     private String telefono;
     private String profesion;
     private int annoExperiencia;
-
     /**
      * Definicion del comportamiento de la persona
      */
+
+     //Tienes que deeclarar todos los atributos por aquí
     public PersonaPoo(String nombre, int edad, String apellidos, String dni, String email, String telefono, String profesion, int annoExperiencia) {
         this.nombre = nombre;
         this.edad = edad;
@@ -30,14 +31,14 @@ public class PersonaPoo {
         this.annoExperiencia = annoExperiencia;
     }
 
-    // MÉTODO PARA MOSTRAR INFORMACIÓN DE LA CLASE PERSONA
+    //MÉTODO PARA MOSTRAR INFORMACIÓN DE LA CLASE PERSONA
     public void mostrarInformacion() {
 
-        System.out.println("Nombre: " + this.nombre + " y edad: " + this.edad + " en la dirección: " + this.direccion);
+        System.out.println("Nombre: " + this.nombre + "y apellidos: " + this.apellidos + " y edad: " + this.edad + " con DNI: " + this.dni + " con email: " + this.email);
 
     }
 
-    // UN OBJETO PARA ESTABLECER Y RECIBIR EL NOMBRE DE UN ALUMNO
+    //UN OBJETO PARA ESTABLECER Y RECIBIR EL NOMBRE DE UN ALUMNO
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -46,16 +47,16 @@ public class PersonaPoo {
         return this.nombre;
     }
 
-    // UN OBJETO PARA ESTABLECER Y RECOGER LA EDAD DEL ALUMNO
-    public void setEdad(int edad) {
+    //UN OBJETO PARA ESTABLECER Y RECOGER LA EDAD DEL ALUMNO
+    public void setEdad (int edad) {
         this.edad = edad;
     }
-
+    
     public int getEdad() {
         return this.edad;
     }
 
-    // UN OBJETO PARA ESTABLECER Y RECIBIR EL APELLIDO DE UN ALUMNO
+    //UN OBJETO PARA ESTABLECER Y RECIBIR EL APELLIDO DE UN ALUMNO
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
@@ -64,7 +65,7 @@ public class PersonaPoo {
         return this.apellidos;
     }
 
-    // UN OBJETO PARA ESTABLECER Y RECOGER EL DNI
+    //UN OBJETO PARA ESTABLECER Y RECOGER EL DNI
     public void setdni(String dni) {
         this.dni = dni;
     }
@@ -73,7 +74,7 @@ public class PersonaPoo {
         return this.dni;
     }
 
-    // UN OBJETO PARA ESTABLECER Y RECOGER EL EMAIL DEL ALUMNO
+    //UN OBJETO PARA ESTABLECER Y RECOGER EL EMAIL  DEL ALUMNO
     public void setEmail(String email) {
         this.email = email;
     }
@@ -82,7 +83,7 @@ public class PersonaPoo {
         return this.email;
     }
 
-    // UN OBJETO PARA ESTABLECER Y RECOGER EL TELEFONO DEL ALUMNO
+    //UN OBJETO PARA ESTABLECER Y RECOGER EL TELEFONO DEL ALUMNO
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
@@ -91,7 +92,7 @@ public class PersonaPoo {
         return this.telefono;
     }
 
-    // UN OBJETO PARA ESTABLECER Y RECOGER LA PROFESION
+    //UN OBJETO PARA ESTABLECER Y RECOGER LA PROFESION
     public void setProfesion(String profesion) {
         this.profesion = profesion;
     }
@@ -100,7 +101,7 @@ public class PersonaPoo {
         return this.profesion;
     }
 
-    // UN OBJETO PARA ESTABLECER Y RECOGER LOS AÑOS DE EXPERIENCIA
+    //UN OBJETO PARA ESTABLECER Y RECOGER LOS AÑOS DE EXPERIENCIA
     public int getAnnoExperiencia() {
         return this.annoExperiencia;
     }
@@ -109,7 +110,7 @@ public class PersonaPoo {
         this.annoExperiencia = annoExperiencia;
     }
 
-    // UN OBJETO PARA ESTABLECER Y RECOGER LA DIRECCION DEL ALUMNO
+    //UN OBJETO PARA ESTABLECER Y RECOGER LA DIRECCION DEL ALUMNO
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
@@ -118,7 +119,7 @@ public class PersonaPoo {
         return this.direccion;
     }
 
-    // MÉTODO PARA SABER SI LA PERSONA ESTÁ JUBILADA O NO
+    //MÉTODO PARA SABER SI LA PERSONA ESTÁ JUBILADA O NO
     public boolean estaJubilado() {
         if (this.edad > 65) {
             System.out.println("La persona en cuestión se encuentra jubilad@.");
