@@ -10,4 +10,4 @@ Cualquier duda sobre la práctica puedes mandarme un correo a: pgoncam215@g.educ
 ## Estructura del contenido
 
 Todas las clases que la actividad me pide están dentro de la carpeta "poo" y la carpeta "funcional" contiene un ".java" que
-tenía para ir probando las cosas
+tenía para ir probando las cosas.
