@@ -34,7 +34,7 @@ public class PersonaPoo {
     //MÉTODO PARA MOSTRAR INFORMACIÓN DE LA CLASE PERSONA
     public void mostrarInformacion() {
 
-        System.out.println("Nombre: " + this.nombre + "y apellidos: " + this.apellidos + " y edad: " + this.edad + " con DNI: " + this.dni + " con email: " + this.email);
+        System.out.println("Nombre: " + this.nombre + " - Apellidos: " + this.apellidos + " - Edad: " + this.edad + " con DNI: " + this.dni + " -  Email: " + this.email + " - Teléfono: " + this.telefono + " - Profesión: " + this.profesion + " - Años experiencia: " + this.annoExperiencia);
 
     }
 

@@ -8,7 +8,7 @@ public class Usuario extends PersonaPoo{
     private int numSocio;
     private List<Libro>listaPrestados;
 
-    public Usuario(String nombre, int edad, String direccion, String apellidos, String dni, String email, String telefono, String profesion, int annoExperiencia, int numSocio, Libro listLibro)
+    public Usuario(String nombre, int edad, String direccion, String apellidos, String dni, String email, String telefono, String profesion, int annoExperiencia, int numSocio)
     {
         super(nombre, edad, apellidos, dni, email, telefono, profesion, annoExperiencia);
         this.numSocio = numSocio;

@@ -23,10 +23,6 @@ public class Libro {
         this.dispReserva = dispReserva;
     }
 
-    public void LibroFisico ()
-    {
-        
-    }
 
     ///////////////////////////////////////////////////////////
     //FUNCIONALIDADES PARA CADA ATRIBUTO

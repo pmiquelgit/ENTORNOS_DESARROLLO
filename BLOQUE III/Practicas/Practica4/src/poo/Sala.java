@@ -22,7 +22,7 @@ public class Sala {
         this.nombre = nombre;
         this.capacidad = capacidad;
         this.pizarra = pizarra;
-        this.tipo = tipo;
+        this.tipo = tipo; //Puede ser de estudio, de lecutura o infantil
         this.dispReserva = dispReserva;
         this.numPersonas = numPersonas;
         this.aforoMax = aforoMax;
@@ -136,7 +136,7 @@ public class Sala {
     public boolean entrarPersona(PersonaPoo p) {
         if (this.personas.size() < this.getCapacidad()) {
             this.personas.add(p);
-            System.out.println("La persona: " + p.getNombre() + "ha entrado en la sala: " + this.nombre);
+            System.out.println("La persona: " + p.getNombre() + " ha entrado en la sala: " + this.nombre);
             return true;
         } else {
             System.out.println("Capacidad de la sala llena. " + p.getNombre() + " no puede entrar.");
