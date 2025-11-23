@@ -1,6 +1,6 @@
 package Clases;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Persona {
     
@@ -19,7 +19,7 @@ public class Persona {
 
 
     public int getEdad() {
-        
+     return (Integer) null; // <-- He añadido esto de aquí para que el archivo no me dé error   
     }
 
     
