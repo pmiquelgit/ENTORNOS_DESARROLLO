@@ -1,13 +1,10 @@
-## Práctica 4 y 5 sobre POO. | Pau Miquel
+## Práctica 6 sobre POO. | Pau Miquel
 
-Buenas! Aquí es donde guardo la carpeta en donde he realizado la práctica 3, 4 y 5 sobre POO en un mismo proyecto.
+Buenas! Aquí es donde guardo la carpeta en donde he realizado la práctica 6 sobre POO.
 
-Como he ido extendiendo las clases a medida que he ido realizando las prácticas, he tratado de ir comentando en todas las clases, 
-para que se sepa lo que realizan los métodos que he hecho y mantenerlo todo un poco más ordenado. 
+Para esta entrega no tengo mucho que comentar, he tratado de prevenir que los archivos diesen errores por lógicas vacías en los métodos y poco más.
+He aplicado los conocimientos sobre los ejercicios anteriores, espero que todo esté correcto.
 
+## Contacto
 Cualquier duda sobre la práctica puedes mandarme un correo a: pgoncam215@g.educaand.es
 
-## Estructura del contenido
-
-Todas las clases que la actividad me pide están dentro de la carpeta "poo" y la carpeta "funcional" contiene un ".java" que
-tenía para ir probando las cosas.
