@@ -9,7 +9,7 @@ public class Producto {
         this.precio = precio;
     }
 
-    //GETTERS Y SETTERS  PARA LOS ATRIBUTOS DE PERSONA
+    //GETTERS Y SETTERS
     public String getNombre()
     {
         return this.nombre;

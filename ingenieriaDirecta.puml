@@ -1,0 +1,56 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+' Clases 
+abstract class Producto {
+    - nombre : String
+    - precio : double
+    + calcularPrecioFinal() : double
+    + toString() : String
+}
+
+class ProductoFisico {
+    - costeEnvio : double
+    + calcularPrecioFinal() : double
+}
+
+class ProductoDigital {
+    - tamanoDescarga : double
+    + calcularPrecioFinal() : double
+}
+
+class Cliente {
+    - nombre : String
+    - correo : String
+    - direccion : String
+    + getNombre() : String
+    + getCorreo() : String
+    + getDireccion() : String
+}
+
+class Pedido {
+    - productos : List<Producto>
+    - cliente : Cliente
+    + agregarProducto(p : Producto) : void
+    + calcularTotal() : double
+    + mostrarResumen() : void
+}
+
+class Main {
+    + main(args : String[]) : void
+}
+
+' Relaciones 
+
+' Herencia
+Producto <|-- ProductoFisico
+Producto <|-- ProductoDigital
+
+' Asociación (Pedido → Cliente)
+Pedido --> Cliente : tiene un >
+
+' Agregación/Composición (Pedido → Producto)
+Pedido *-- Producto : contiene >
+
+@enduml
