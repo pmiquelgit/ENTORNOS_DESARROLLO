@@ -9,5 +9,3 @@ En esta carpeta se encuentran todos los archivos .java (prácticamente vacíos) 
 
 # OUTPUT
 En este directorio se encontrará el código generado mediamente diagramas UML con la extensión **"PlantUML"** para la primera parte del proyecto de **sistema de gestión de pedidos**.
-
-El resto de archivios
