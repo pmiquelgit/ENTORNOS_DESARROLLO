@@ -1,3 +1,5 @@
+package src.main.java;
+
 public class ProductoDigital extends Producto {
     private double tamanyoDescarga;
     private double porcientoIva;

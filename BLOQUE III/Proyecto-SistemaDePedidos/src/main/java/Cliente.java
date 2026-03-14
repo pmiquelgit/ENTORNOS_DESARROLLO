@@ -1,3 +1,6 @@
+package src.main.java;
+
+
 public class Cliente {
     
     private String nombre;
