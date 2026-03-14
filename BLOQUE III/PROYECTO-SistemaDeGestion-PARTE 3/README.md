@@ -1,10 +1,8 @@
-# junit-v6-example
-Example project to put in practice the JUnit v6 library. Based on https://github.com/junit-team/junit-examples/tree/r6.0.3/junit-jupiter-starter-maven
+# SISTEMA DE GESTIÓN DE PEDIDOS PARTE 3
+Buenos días/tardes/noches, aquí se encuentra la extensión del proyecto que estamos realizando en entornos de desarrollo con su debida parte 3.
 
-# junit-jupiter-starter-maven
+# DISTRIBUCIÓN
+Dentro de la carpeta "src", se encuentran las carpetas "main" y "test".
 
-The `junit-jupiter-starter-maven` project demonstrates how to execute JUnit Jupiter
-tests using Maven.
-
-Please note that this project uses the [Maven Wrapper](https://github.com/apache/maven-wrapper).
-Thus, to ensure that the correct version of Maven is used, invoke `mvnw` instead of `mvn`.
+Dentro de "main" se encuentra todo el funcionamiento del sistema.
+Dentro de "test" se encuentran todos los casos de prueba pasados a código los cuales han sido testeados con QASPhere.
