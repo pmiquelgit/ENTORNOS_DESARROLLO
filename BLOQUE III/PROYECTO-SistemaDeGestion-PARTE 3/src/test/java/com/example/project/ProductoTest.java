@@ -16,19 +16,27 @@ public class ProductoTest {
     @Test
     @DisplayName("Calcular precio de producto físico")
     void calcularPrecioFisicoTest() {
+
+        //ARRANGE
         ProductoFisico productoTestFisico = new ProductoFisico("Ordenador", 100.0, 15);
+        //ACT
         double resultado = productoTestFisico.calcularPrecioFinal();
+        //ASSERT
         assertEquals(115.0, resultado, "El producto no ha dado el resultado esperado"); 
         //Aquí al final coloco un mensaje de error en caso de que el producto que he creado no sea el resultado que esperamos
     }
 
+    
     // CALCULAR PRECIO DE PRODUCTO DIGITAL
-    @Test@DisplayName("Calcular precio de producto digital")
+    @Test
+    @DisplayName("Calcular precio de producto digital")
     void calcularPrecioDigitalTest() {
         ProductoDigital productoDigitalTest = new ProductoDigital("Videojuego", 75, 20.0, 15, 0.0);
         double resultado = productoDigitalTest.calcularPrecioFinal();
         assertEquals(resultado, 86.25, "Algo salió mal, el precio obtenido no fue el correcto.");
     }
+
+    
 
     /////////////////////////////
     //CASOS DE PRUEBA NEGATIVOS//

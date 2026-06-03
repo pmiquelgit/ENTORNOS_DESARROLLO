@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+
 public class PedidoTest {
     
     /////////////////////////////
@@ -15,9 +16,9 @@ public class PedidoTest {
 
 
     //SUMAR EL TOTAL DEL PEDIDO, ESTE LO HARÉ UNA "PARAMETERIZED TEST" COMO ME PIDE EL ENUNCIADO QUE HAGA
-    @ParameterizedTest
+    @ParameterizedTest          
     @DisplayName("Sumar el total del pedido")
-    @CsvSource({
+    @CsvSource({       
         "100.0, 16.0, 110.0, 0, 0, 226", //Este caso lo haré con los datos que he introducido en QASphere
         "50.0, 5.0, 20.0, 10.0, 2.0, 75.0", //Aquí introduciré datos aleatorios para probar
         "0.0, 0.0, 0.0, 0.0, 0.0, 0.0" //En este caso sería todo gratis
@@ -44,12 +45,18 @@ public class PedidoTest {
     @Test
     @DisplayName("Validar el coste de envío de un producto físico")
     void validarCosteEnvio() {
+        //ARRANGE = Crear las instancias con las que vamos a trabajar
         ProductoFisico productoFisicoTest = new ProductoFisico("producto de prueba", 34.99, 15.99);
+        
+        //ACT = Lo que se va a ejecutar dentro del test
         double costeEnvioDeProducto = productoFisicoTest.getCosteEnvio();
 
+        //ASSERT = Pos la validación
         assertEquals(costeEnvioDeProducto, 15.99, "El coste de envío recibido no ha sido el esperado");
-
     }
+
+
+
 
     //AGREGAR UN PRODUCTO VÁLIDO AL PEDIDO
     @Test
@@ -58,10 +65,9 @@ public class PedidoTest {
 
         Cliente clienteTest = new Cliente("Lara", "lara@ejemplo.com", "Calle locuras");
         Pedido pedidoTest = new Pedido(clienteTest);
-
         Producto producto = new ProductoFisico("Ratón", 50.0, 5.0);
-
         pedidoTest.agregarProducto(producto);
+        
 
         assertEquals(55.0, pedidoTest.calcularTotal(), "El total del pedido tiene que mostrar el total del producto, pero no ha sido así.");
     }
@@ -122,3 +128,4 @@ public class PedidoTest {
         }, "Un cliente no debería poder tener un nombre nulo");
     }
 }
+

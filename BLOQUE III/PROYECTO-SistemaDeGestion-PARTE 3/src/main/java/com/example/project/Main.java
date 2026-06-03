@@ -2,7 +2,7 @@ package com.example.project;
 
 
 public class Main {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         
         //Aquí creo un cliente de prueba
         Cliente cliente1 = new Cliente("Paco Fernández", "pacofernandez@gmail.com", "Calle Rodríguez");
