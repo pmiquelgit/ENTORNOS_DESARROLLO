@@ -33,7 +33,7 @@ Para el main, he tenido que añadir dos clases nuevas que son:
     - `pais` -> Determina los gastos de envío.
 
 # TEST
-Para los test, he tenido que añadir varios nuevos archivos para las pruebas de integración y para obtener el 80% de cobertura que se me pide en el proyecto:
+Para los test, he tenido que añadir un nuevo archivo para las pruebas de integración:
 - **"TiendaFacturaIntegrationTest.java"** -> En este he hecho la prueba compelta de E2E.
 
 He modificado/corregido dos archivos que ya tenía de antes que fallaban:
