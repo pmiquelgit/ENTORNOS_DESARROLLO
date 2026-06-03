@@ -47,9 +47,8 @@ public class Producto {
     //del producto sin que me develva un identificador inentendible.
 
     @Override
-    public String toString() 
-    {
-        return String.format("Nombre del producto: " + this.nombre + " - Precio: " + this.precio);
+    public String toString() {
+        return String.format("Nombre del producto: %s - Precio: %s", this.nombre, this.precio);    
     }
 
 }

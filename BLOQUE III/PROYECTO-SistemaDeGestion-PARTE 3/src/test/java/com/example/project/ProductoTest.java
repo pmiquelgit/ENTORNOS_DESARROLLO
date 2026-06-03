@@ -52,5 +52,37 @@ public class ProductoTest {
             productoTest.setPrecio(-15.0);
         }, "El sistema no debería permitir productos con precio negativo");
 
-    }    
+    }
+    
+    
+
+    ////////////////////////////////////////////////////
+    //CASOS DE PRUEBA PARA SUPERAR EL 80% EN SONARCUBE//
+    ////////////////////////////////////////////////////
+
+    @Test
+    void testGettersSettersYMetodosBase() {
+        // 1. Creamos un producto de prueba
+        Producto producto = new Producto("Manzana", 1.5);
+
+        // 2. Comprobamos los Setters (Esto pondrá en verde las líneas 23 y 37)
+        producto.setNombre("Pera");
+        producto.setPrecio(2.0); // Al poner un precio > 0, cubrimos el "else" oculto de la línea 34
+
+        // 3. Comprobamos los Getters (Esto pondrá en verde las líneas 18)
+        assertEquals("Pera", producto.getNombre());
+        assertEquals(2.0, producto.getPrecio());
+
+        // 4. Comprobamos calcularPrecioFinal (Pondrá en verde la línea 43)
+        assertEquals(0.0, producto.calcularPrecioFinal());
+
+        // 5. Comprobamos el toString (Pondrá en verde la línea 52)
+        String textoEsperado = "Nombre del producto: Pera - Precio: 2.0";
+        assertEquals(textoEsperado, producto.toString());
+    }
+
+
+
+
+
 }

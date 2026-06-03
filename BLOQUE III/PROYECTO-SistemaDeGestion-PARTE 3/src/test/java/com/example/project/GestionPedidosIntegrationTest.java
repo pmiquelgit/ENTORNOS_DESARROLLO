@@ -55,8 +55,6 @@ class GestionPedidosIntegrationTest {
     void noDeberiaFallarSiSeAgregaProductoNulo() {
         // Test de integración para asegurar que el sistema no "explota" (NullPointerException)
         // al interactuar con datos erróneos.
-        // CORRECCIÓN: agregarProducto(null) lanza NullPointerException controlada,
-        // ya que el sistema no permite productos nulos en un pedido.
         assertThrows(NullPointerException.class,
             () -> pedido.agregarProducto(null),
             "Agregar un producto nulo debe lanzar NullPointerException");
