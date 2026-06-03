@@ -28,9 +28,9 @@ Para el main, he tenido que añadir dos clases nuevas que son:
     - Y el total final
 
 - **"Cliente.java"** -> También he tenido que modificar esta clase para añadirle los siguientes atributos:
-      - `anyosAntiguedad` -> Determina el porcentaje de descuento de fidelidad.
-      - `esVip` -> Añade un 5% extra de descuento.
-      - `pais` -> Determina los gastos de envío.
+    - `anyosAntiguedad` -> Determina el porcentaje de descuento de fidelidad.
+    - `esVip` -> Añade un 5% extra de descuento.
+    - `pais` -> Determina los gastos de envío.
 
 # TEST
 Para los test, he tenido que añadir un nuevo archivo para las pruebas de integración:
