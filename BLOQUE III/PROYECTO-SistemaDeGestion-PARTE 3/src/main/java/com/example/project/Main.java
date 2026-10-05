@@ -1,7 +1,17 @@
 package com.example.project;
 
-
+/**
+ * Entry point of the application. Builds a sample customer, products and an order,
+ * and prints the order summary.
+ */
 public class Main {
+
+    /**
+     * Runs the demo: creates a customer, four products (two physical, two digital),
+     * adds them to an order and shows the summary.
+     *
+     * @param args command line arguments (not used)
+     */
     public static void main(String[] args) {
         
         //Aquí creo un cliente de prueba

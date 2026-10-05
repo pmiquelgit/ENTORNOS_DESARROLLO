@@ -1,24 +1,29 @@
 package com.example.project;
 
-// Esta es la clase "orquestadora" nueva que se me pide añadir
-// Esta será el foco principal de las pruebas de integración
+/**
+ * Orchestrator class of the shop. It validates an order, calculates the total,
+ * applies the loyalty discount, adds the shipping costs by country and
+ * generates the invoice. It is the main target of the integration tests.
+ */
 public class Tienda {
     
-    // Gastos de envío según zona geográfica
+    /** Shipping cost for Spain. */
     private static final double ENVIO_ESPANA = 0.0;
-    private static final double ENVIO_ZONA_CERCANA = 5.0; // Países como francia, italia, portugal etc...
-    private static final double ENVIO_RESTO_ZONAS = 10.0; // Resto de países del mundo
+    /** Shipping cost for nearby countries (France, Italy, Portugal). */
+    private static final double ENVIO_ZONA_CERCANA = 5.0;
+    /** Shipping cost for the rest of the world. */
+    private static final double ENVIO_RESTO_ZONAS = 10.0;
 
     /**
-     * Realiza la venta completa del sistema.
-     * Orquesta el flujo: valida el pedido, calcula el total, aplica descuentos
-     * de fidelidad, añade gastos de envío según el país y genera la Factura.
+     * Performs a complete sale.
+     * Orchestrates the flow: validates the order, calculates the total, applies the
+     * loyalty discount, adds the shipping costs by country and generates the invoice.
      *
-     * @param cliente El cliente que realiza la compra. No puede ser null.
-     * @param pedido  El pedido con los productos. No puede ser null ni estar vacío.
-     * @return Un objeto Factura con el desglose completo de la compra.
-     * @throws IllegalArgumentException Si el cliente o el pedido son null.
-     * @throws IllegalStateException    Si el pedido no contiene productos.
+     * @param cliente the customer who makes the purchase, must not be null
+     * @param pedido  the order with the products, must not be null or empty
+     * @return an invoice with the full breakdown of the purchase
+     * @throws IllegalArgumentException if the customer or the order are null
+     * @throws IllegalStateException    if the order contains no products
      */
     public Factura realizarVenta(Cliente cliente, Pedido pedido) {
         if (cliente == null) {
@@ -44,14 +49,13 @@ public class Tienda {
     }
 
     /**
-     * Calcula los gastos de envío en función del país del cliente.
-     * España: 0€ | Francia, Italia, Portugal: 5€ | Resto de países: 10€
+     * Calculates the shipping costs depending on the country of the customer.
+     * Spain: 0 EUR | France, Italy, Portugal: 5 EUR | Rest of countries: 10 EUR
+     * (a null country is treated as the rest of the world).
      *
-     * @param pais País del cliente en mayúsculas (ej. "ESPAÑA", "FRANCIA")
-     * @return El coste de envío en euros
+     * @param pais the country of the customer (case-insensitive), for example "ESPAÑA" or "FRANCIA"
+     * @return the shipping cost in euros
      */
-    // Con esta función, voy a calcular los gastos de envío del cliente en base al país del que sea
-    // España = 0€ | Francia, Italia, Portugal = 5€ | Resto de países = 10€
     public double calcularGastoEnvioPorPais(String pais) {
         if (pais == null) {
             return ENVIO_RESTO_ZONAS;
@@ -64,16 +68,14 @@ public class Tienda {
     }
 
     /**
-     * Calcula el importe del descuento de fidelidad sobre un total dado.
-     * Más de 5 años: 10% | Hasta 5 años: 5% | Cliente VIP: +5% adicional
+     * Calculates the loyalty discount amount for a given total.
+     * More than 5 years: 10% | Up to 5 years: 5% | VIP customer: extra 5%
      *
-     * @param total            Importe sobre el que se aplica el descuento
-     * @param anyosAntiguedad  Años que lleva el cliente registrado
-     * @param esVip            Si el cliente tiene estado VIP
-     * @return El importe a descontar en euros
+     * @param total            the amount the discount is applied to
+     * @param anyosAntiguedad  years the customer has been registered
+     * @param esVip            whether the customer has VIP status
+     * @return the amount to discount, in euros
      */
-    // Calculo el importe del descuento de fidelidad sobre un total
-    // Yo lo haré de la siguiente manera: +5 años: 10% | Hasta 5 años: 5% | Cliente VIP: +5% adicional
     public double calcularDescuentoFidelidad(double total, int anyosAntiguedad, boolean esVip) {
         double porcentaje = (anyosAntiguedad > 5) ? 0.10 : 0.05;
         if (esVip) {
